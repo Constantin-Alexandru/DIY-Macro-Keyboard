@@ -23,10 +23,19 @@ keyboard = Keyboard(usb_hid.devices)
 
 while True:
     if not btn1.value:
-        # Add code for mapping the 1st button
+        print("Select All")
+        keyboard.press(Keycode.CONTROL, Keycode.A)
+        time.sleep(0.1)
+        keyboard.release(Keycode.CONTROL, Keycode.A)
     if not btn2.value:
-        # Add code for mapping the 2nd button
+        print("Copy")
+        keyboard.press(Keycode.CONTROL, Keycode.C)
+        time.sleep(0.1)
+        keyboard.release(Keycode.CONTROL, Keycode.C)
     if not btn3.value:
-        # Add code for mapping the 3rd button
-        
+        print("Paste")
+        keyboard.press(Keycode.CONTROL, Keycode.V)
+        time.sleep(0.1)
+        keyboard.release(Keycode.CONTROL, Keycode.V)
+
     time.sleep(0.1)
